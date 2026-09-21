@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#050812">
+  <meta name="description" content="Vertex Space Shooter">
+  <title>Vertex Space Shooter</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="security.js" defer></script>
+  <script src="game.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span>🚀</span><div><strong>Vertex Space Shooter</strong><small>Vertex Games</small></div></div>
+    <button id="restartBtn">إعادة</button>
+  </header>
+
+  <main class="page">
+    <section class="hero">
+      <span>SPACE COMBAT</span>
+      <h1>إطلاق نار فضائية</h1>
+      <p>حرّك السفينة، أطلق النار، واصمد أطول وقت ممكن.</p>
+    </section>
+
+    <section class="game-layout">
+      <aside class="panel">
+        <div><span>النقاط</span><strong id="score">0</strong></div>
+        <div><span>الحياة</span><strong id="lives">3</strong></div>
+        <div><span>المستوى</span><strong id="level">1</strong></div>
+        <p>الحركة: الأسهم أو WASD<br>الإطلاق: Space</p>
+      </aside>
+
+      <section class="game-card">
+        <canvas id="gameCanvas" width="900" height="600"></canvas>
+        <div id="overlay" class="overlay show">
+          <div>
+            <span id="overlayIcon">🚀</span>
+            <h2 id="overlayTitle">جاهز للمعركة؟</h2>
+            <p id="overlayText">دمر سفن الأعداء ولا تدعها تصطدم بك.</p>
+            <button id="startBtn">ابدأ اللعبة</button>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="mobile-controls">
+      <div>
+        <button data-control="left">←</button>
+        <button data-control="fire" class="fire">🔥</button>
+        <button data-control="right">→</button>
+      </div>
+      <div>
+        <button data-control="up">↑</button>
+        <button data-control="down">↓</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>Vertex Systems AI © 2026</footer>
+</body>
+</html>
